@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative; /* To position the underline */
+}
+
+/* Add the underline on hover */
+.nav-links a:hover {
+  color: #f1f1f1; /* Optional color change */
+}
+
+/* Add underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Distance from the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f1f1f1; /* Underline color */
+  transition: width 0.3s ease; /* Animation for underline */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* toggle Icon */
+.toggle-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.toggle-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+.hero h1 {
+  font-size: 3em;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .toggle-icon {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+}

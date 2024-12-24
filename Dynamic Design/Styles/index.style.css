@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.user-list {
+  margin-top: 20px;
+}
+.user {
+  padding: 10px;
+  margin: 10px 0;
+}
+.user h3 {
+  margin: 0;
+}

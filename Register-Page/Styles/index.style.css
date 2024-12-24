@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 20px auto;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  padding-top: 10px;
+}
+
+.submit {
+  width: 200px;
+  height: 25px;
+  background-color: #5a86f1;
+  color: white;
+}
+.submit:hover {
+  background-color: #4a6dbd;
+}
